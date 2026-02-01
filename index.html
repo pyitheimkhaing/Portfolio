@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
-    <!-- Google tag (gtag.js) -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-0N4FR4R53C"
@@ -12,7 +11,6 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-0N4FR4R53C");
     </script>
 
@@ -25,21 +23,36 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
+
       body {
         font-family: "Plus Jakarta Sans", sans-serif;
-        background-color: #020617;
+        background-color: #ffffff;
+        color: #0f172a; /* Slate 900 */
       }
 
-      .aurora-text {
-        background: linear-gradient(to right, #22d3ee, #818cf8);
+      /* Gold Metallic Gradient for Headings and Typing Text */
+      .gold-gradient-text {
+        background: linear-gradient(90deg, #b8860b 0%, #fbbf24 50%, #b8860b 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        display: inline-block;
+      }
+
+      .social-rotate {
+        transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        color: #64748b;
+      }
+      .social-rotate:hover {
+        transform: rotate(360deg);
+        color: #b8860b;
       }
 
       .nav-link {
         position: relative;
+        font-weight: 600;
       }
       .nav-link::after {
         content: "";
@@ -48,137 +61,128 @@
         height: 2px;
         bottom: -4px;
         left: 0;
-        background: linear-gradient(to right, #22d3ee, #6366f1);
+        background: #b8860b;
         transition: width 0.3s ease;
       }
       .nav-link:hover::after {
         width: 100%;
       }
 
-      .social-rotate:hover {
-        transform: rotate(360deg);
+      .soft-card {
+        background: #ffffff;
+        border: 1px solid #f1f5f9;
+        box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+        transition: all 0.4s ease;
       }
-
-      .glass-card {
-        background: rgba(15, 23, 42, 0.6);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(51, 65, 85, 0.5);
+      .soft-card:hover {
+        transform: translateY(-5px);
+        /* Minimalist Amber Shadow Glow */
+        box-shadow: 0 20px 40px -15px rgba(184, 134, 11, 0.12);
+        border-color: #b8860b44;
       }
     </style>
   </head>
-  <body class="text-zinc-300">
+
+  <body class="antialiased selection:bg-amber-100 selection:text-amber-900">
     <nav
-      class="fixed w-full z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800"
+      class="fixed w-full z-[60] bg-white/80 backdrop-blur-md border-b border-slate-100"
     >
       <div
-        class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center"
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
       >
-        <div
-          class="text-2xl font-extrabold tracking-tight text-white uppercase"
-        >
-          P<span class="aurora-text">T</span>
+        <div class="text-xl font-extrabold tracking-tighter text-slate-900">
+          P<span class="text-[#b8860b]">T</span>
         </div>
 
         <div
-          class="hidden md:flex space-x-10 font-semibold text-sm tracking-wide"
+          class="hidden md:flex space-x-8 text-[11px] tracking-[0.2em] uppercase font-bold text-slate-500"
         >
-          <a
-            href="#about"
-            class="nav-link hover:text-white transition uppercase"
-            >About</a
+          <a href="#profile" class="nav-link hover:text-slate-900 transition"
+            >Overview</a
           >
-          <a
-            href="#experience"
-            class="nav-link hover:text-white transition uppercase"
-            >Experience</a
+          <a href="#experience" class="nav-link hover:text-slate-900 transition"
+            >Stack</a
           >
-          <a
-            href="#projects"
-            class="nav-link hover:text-white transition uppercase"
-            >Projects</a
+          <a href="#projects" class="nav-link hover:text-slate-900 transition"
+            >Portfolio</a
           >
-          <a
-            href="#contact"
-            class="nav-link hover:text-white transition uppercase"
+          <a href="#contact" class="nav-link hover:text-slate-900 transition"
             >Contact</a
           >
         </div>
 
-        <button class="md:hidden text-cyan-400 text-2xl" onclick="toggleMenu()">
-          <i class="fas fa-terminal" id="menu-icon"></i>
+        <button class="md:hidden text-slate-900" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
         </button>
       </div>
     </nav>
 
     <section
       id="profile"
-      class="relative min-h-screen flex flex-col md:flex-row items-center justify-center px-6 gap-16 pt-24 overflow-hidden"
+      class="relative min-h-screen flex flex-col md:flex-row items-center justify-center px-6 gap-20 pt-20"
     >
       <div
-        class="absolute top-1/4 -left-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px]"
-      ></div>
-      <div
-        class="absolute bottom-1/4 -right-20 w-96 h-96 bg-indigo-500/10 rounded-full blur-[120px]"
+        class="absolute top-0 right-0 w-1/3 h-screen bg-slate-50/50 -z-10"
       ></div>
 
-      <div class="relative group">
+      <div class="relative">
         <div
-          class="absolute -inset-1.5 bg-gradient-to-r from-cyan-500 to-indigo-500 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-1000"
+          class="absolute -bottom-6 -right-6 w-32 h-32 bg-amber-50 rounded-full -z-10"
         ></div>
-
         <div
-          class="relative w-72 h-72 md:w-96 md:h-96 overflow-hidden rounded-2xl border border-slate-700 bg-slate-900"
+          class="w-72 h-72 md:w-80 md:h-80 overflow-hidden rounded-full border-8 border-white shadow-2xl relative z-10"
         >
           <img
             src="./assets/Untitled design (5).png"
             alt="Profile"
-            class="w-full h-full object-cover transition duration-500 hover:scale-105"
+            class="w-full h-full object-cover"
           />
         </div>
       </div>
 
-      <div class="relative text-center md:text-left max-w-xl">
-        <h2 class="text-cyan-400 font-mono tracking-widest mb-4">
-          01. Start Here
+      <div class="max-w-xl text-center md:text-left">
+        <h2
+          class="text-[#b8860b] font-bold tracking-[0.3em] mb-4 text-[10px] uppercase"
+        >
+          Software Developer
         </h2>
         <h1
-          class="text-5xl md:text-8xl font-extrabold text-white mb-6 leading-tight"
+          class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 leading-tight tracking-tight"
         >
           Pyi Theim Khaing
         </h1>
-        <div class="text-2xl md:text-3xl font-semibold text-slate-400 mb-8">
-          I am a <span class="typing aurora-text"></span>
+        <div class="text-xl md:text-2xl font-semibold text-slate-500 mb-10">
+          I build <span class="typing gold-gradient-text"></span>
         </div>
 
-        <div class="flex flex-wrap gap-5 justify-center md:justify-start mb-10">
+        <div class="flex flex-wrap gap-4 justify-center md:justify-start mb-12">
           <a
             href="./assets/PyiTheimKhaing_Jr_Software_Dev.pdf"
-            download="PyiTheimKhaing_Jr_Software_Dev.pdf"
-            class="group relative inline-block px-8 py-4 bg-white text-slate-950 font-bold rounded-xl transition-all overflow-hidden"
+            download
+            class="px-8 py-4 bg-slate-900 text-white font-bold rounded-full hover:bg-[#b8860b] transition-all shadow-lg shadow-slate-200 uppercase text-[10px] tracking-widest"
           >
-            <span class="relative z-10">Download CV</span>
-            <div
-              class="absolute inset-0 bg-cyan-400 translate-y-full group-hover:translate-y-0 transition-transform duration-300"
-            ></div>
+            Download CV
           </a>
-
           <a
             href="#contact"
-            class="px-8 py-4 border border-slate-700 font-bold rounded-xl hover:bg-slate-800 transition-all text-white"
-            >Hire Me</a
+            class="px-8 py-4 border-2 border-slate-100 font-bold rounded-full hover:bg-slate-50 transition-all text-slate-600 uppercase text-[10px] tracking-widest"
           >
+            Let's Talk
+          </a>
         </div>
 
         <div class="flex gap-8 justify-center md:justify-start">
           <a
             href="https://linkedin.com/in/pyi-theim-khaing"
-            class="social-rotate text-3xl text-slate-500 hover:text-cyan-400 transition-all duration-500"
+            target="_blank"
+            class="social-rotate text-2xl"
           >
             <i class="fab fa-linkedin"></i>
           </a>
           <a
             href="https://github.com/Snape-bur"
-            class="social-rotate text-3xl text-slate-500 hover:text-white transition-all duration-500"
+            target="_blank"
+            class="social-rotate text-2xl"
           >
             <i class="fab fa-github"></i>
           </a>
@@ -186,74 +190,131 @@
       </div>
     </section>
 
-    <section id="experience" class="py-32 bg-slate-900/30">
+    <section id="about" class="py-24 bg-white border-b border-slate-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row gap-20 items-center">
+      
+      <div class="md:w-3/5">
+        <h2 class="gold-gradient-text font-bold tracking-[0.4em] mb-4 text-[10px] uppercase">02. Introduction</h2>
+        <h3 class="text-4xl font-extrabold text-slate-900 mb-8 tracking-tight leading-tight">
+          Solving technical problems through the lens of human behavior.
+        </h3>
+        <div class="space-y-6 text-slate-600 leading-relaxed text-lg">
+          <p>
+            I am a Software Developer at <strong>London Metropolitan University</strong>, where I’ve developed a deep fascination with how backend systems interact with the real world. 
+          </p>
+          <p>
+            My background in <strong>Psychology</strong> gives me a unique edge in software development. I don’t just write code to meet requirements; I architect systems—like my car-rental engine <strong>ApexDrive</strong>—with the end-user’s cognitive experience in mind.
+          </p>
+          <p>
+            I specialize in the <strong>.NET ecosystem</strong>, focusing on building secure, scalable, and highly efficient backend infrastructures that solve complex logistical challenges.
+          </p>
+        </div>
+      </div>
+
+      <div class="md:w-2/5 w-full grid grid-cols-1 gap-4">
+        <div class="group p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-white hover:shadow-xl hover:shadow-amber-500/10 transition-all duration-300">
+          <h4 class="gold-gradient-text font-bold text-[10px] uppercase mb-2 tracking-widest">Education</h4>
+          <p class="text-slate-900 font-bold">B.Sc. Computing (Hons)</p>
+          <p class="text-slate-500 text-sm italic">London Metropolitan University</p>
+        </div>
+
+        <div class="group p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-white hover:shadow-xl hover:shadow-amber-500/10 transition-all duration-300">
+          <h4 class="gold-gradient-text font-bold text-[10px] uppercase mb-2 tracking-widest">Focus</h4>
+          <p class="text-slate-900 font-bold">Backend Architecture & RESTful APIs</p>
+        </div>
+
+        <div class="group p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-white hover:shadow-xl hover:shadow-amber-500/10 transition-all duration-300">
+          <h4 class="gold-gradient-text font-bold text-[10px] uppercase mb-2 tracking-widest">Location</h4>
+          <p class="text-slate-900 font-bold">Bangkok Vicinity / Remote</p>
+        </div>
+
+      <div class="group p-6 rounded-2xl border border-[#b8860b] shadow-lg shadow-amber-200 transition-transform duration-300 hover:scale-[1.02]" 
+     style="background: linear-gradient(135deg, #b8860b 0%, #daa520 50%, #b8860b 100%);">
+  <h4 class="text-white opacity-90 font-bold text-[10px] uppercase mb-2 tracking-widest">
+    Current Status
+  </h4>
+  <p class="text-white font-extrabold text-lg tracking-tight">
+    Available for Junior Dev Roles
+  </p>
+</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <section id="experience" class="py-32 bg-slate-50/50">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="grid lg:grid-cols-3 gap-8">
-          <div class="lg:col-span-1">
-            <h2 class="text-4xl font-bold text-white mb-6">
-              Technical Arsenal
+        <div class="flex flex-col md:flex-row gap-16 items-start">
+          <div class="md:w-1/3">
+            <h2
+              class="text-3xl font-extrabold text-slate-900 mb-6 tracking-tight"
+            >
+              Core Competencies
             </h2>
-            <p class="text-slate-400 mb-8 leading-relaxed">
-              Dual-degree background in Computing and Psychology, providing a
-              unique perspective on building user-centric backend systems.
+            <p class="text-slate-500 mb-8 leading-relaxed">
+              Dual-degree background from London Metropolitan University,
+              bridging technical system architecture with human-centric
+              psychology.
             </p>
-            <div class="flex flex-col gap-4">
-              <div class="p-5 glass-card rounded-2xl">
-                <h4 class="text-cyan-400 font-bold mb-1">Education</h4>
-                <p class="text-sm">B.Sc. Computing (London Met)</p>
-                <p class="text-sm">BA. Psychology</p>
-              </div>
+            <div
+              class="inline-block px-4 py-2 bg-amber-50 text-[#b8860b] rounded-lg text-xs font-bold uppercase tracking-wider"
+            >
+              Available for Hire
             </div>
           </div>
 
-          <div class="lg:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-4">
-            <div
-              class="p-6 glass-card rounded-2xl text-center group hover:border-cyan-500/50 transition"
-            >
-              <i
-                class="fas fa-code text-3xl mb-4 text-indigo-400 group-hover:scale-110 transition"
-              ></i>
-              <p class="font-bold text-white">C# / .NET</p>
+          <div class="md:w-2/3 grid grid-cols-2 sm:grid-cols-3 gap-6">
+            <div class="p-8 soft-card rounded-2xl text-center">
+              <i class="fas fa-code text-2xl mb-4 text-[#b8860b]"></i>
+              <p
+                class="font-bold text-slate-800 text-xs tracking-widest uppercase"
+              >
+                C# / .NET
+              </p>
             </div>
-            <div
-              class="p-6 glass-card rounded-2xl text-center group hover:border-cyan-500/50 transition"
-            >
-              <i
-                class="fas fa-layer-group text-3xl mb-4 text-cyan-400 group-hover:scale-110 transition"
-              ></i>
-              <p class="font-bold text-white">ASP.NET Core</p>
+            <div class="p-8 soft-card rounded-2xl text-center">
+              <i class="fas fa-layer-group text-2xl mb-4 text-[#b8860b]"></i>
+              <p
+                class="font-bold text-slate-800 text-xs tracking-widest uppercase"
+              >
+                ASP.NET Core
+              </p>
             </div>
-            <div
-              class="p-6 glass-card rounded-2xl text-center group hover:border-cyan-500/50 transition"
-            >
-              <i
-                class="fas fa-database text-3xl mb-4 text-emerald-400 group-hover:scale-110 transition"
-              ></i>
-              <p class="font-bold text-white">SQL Server</p>
+            <div class="p-8 soft-card rounded-2xl text-center">
+              <i class="fas fa-database text-2xl mb-4 text-[#b8860b]"></i>
+              <p
+                class="font-bold text-slate-800 text-xs tracking-widest uppercase"
+              >
+                SQL Server
+              </p>
             </div>
-            <div
-              class="p-6 glass-card rounded-2xl text-center group hover:border-cyan-500/50 transition"
-            >
-              <i
-                class="fas fa-cloud text-3xl mb-4 text-blue-400 group-hover:scale-110 transition"
-              ></i>
-              <p class="font-bold text-white">REST APIs</p>
+            <div class="p-8 soft-card rounded-2xl text-center">
+              <i class="fas fa-cloud text-2xl mb-4 text-[#b8860b]"></i>
+              <p
+                class="font-bold text-slate-800 text-xs tracking-widest uppercase"
+              >
+                REST APIs
+              </p>
             </div>
-            <div
-              class="p-6 glass-card rounded-2xl text-center group hover:border-cyan-500/50 transition"
-            >
-              <i
-                class="fab fa-git-alt text-3xl mb-4 text-orange-400 group-hover:scale-110 transition"
-              ></i>
-              <p class="font-bold text-white">Git / GitHub</p>
+            <div class="p-8 soft-card rounded-2xl text-center">
+              <i class="fab fa-git-alt text-2xl mb-4 text-[#b8860b]"></i>
+              <p
+                class="font-bold text-slate-800 text-xs tracking-widest uppercase"
+              >
+                Git / GitHub
+              </p>
             </div>
-            <div
-              class="p-6 glass-card rounded-2xl text-center group hover:border-cyan-500/50 transition"
-            >
+            <div class="p-8 soft-card rounded-2xl text-center">
               <i
-                class="fas fa-project-diagram text-3xl mb-4 text-purple-400 group-hover:scale-110 transition"
+                class="fas fa-project-diagram text-2xl mb-4 text-[#b8860b]"
               ></i>
-              <p class="font-bold text-white">EF Core</p>
+              <p
+                class="font-bold text-slate-800 text-xs tracking-widest uppercase"
+              >
+                EF Core
+              </p>
             </div>
           </div>
         </div>
@@ -262,198 +323,135 @@
 
     <section id="projects" class="py-32">
       <div class="max-w-7xl mx-auto px-6">
-        <div
-          class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4"
-        >
-          <div>
-            <h2
-              class="text-4xl md:text-5xl font-extrabold text-white uppercase italic tracking-tighter"
-            >
-              Selected Works
-            </h2>
-            <p class="text-cyan-400 font-mono mt-2">
-              Personal & Academic Projects
-            </p>
-          </div>
+        <div class="mb-16">
+          <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">
+            Recent Projects
+          </h2>
+          <div class="h-1 w-12 bg-[#b8860b] mt-4 rounded-full"></div>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-10">
-          <!-- ApexDrive -->
-          <div
-            class="group relative bg-slate-900 rounded-3xl overflow-hidden border border-slate-800 transition-all duration-500 hover:-translate-y-2"
-          >
-            <div class="h-64 overflow-hidden">
-              <img
-                src="./assets/homepage.PNG"
-                alt="ApexDrive"
-                class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-              />
-            </div>
-
-            <div class="p-8">
-              <h3 class="text-2xl font-bold text-white mb-3">ApexDrive</h3>
-              <p class="text-slate-400 text-sm leading-relaxed mb-6 italic">
-                A high-performance car rental engine built with .NET.
-              </p>
-
-              <div class="flex justify-between items-center">
-                <div class="flex gap-4">
-                  <a
-                    href="https://github.com/Snape-bur/ApexDrive.git"
-                    class="text-white hover:text-cyan-400 transition"
-                  >
-                    <i class="fab fa-github text-xl"></i>
-                  </a>
-                  <a
-                    href="http://apexdrive.runasp.net/"
-                    class="text-white hover:text-cyan-400 transition"
-                  >
-                    <i class="fas fa-external-link-alt text-lg"></i>
-                  </a>
-                </div>
-
-                <span
-                  class="text-xs font-bold text-cyan-400/50 uppercase tracking-widest"
-                >
-                  ASP.NET Core
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <!-- MediCare -->
-          <div
-            class="group relative bg-slate-900 rounded-3xl overflow-hidden border border-slate-800 transition-all duration-500 hover:-translate-y-2"
-          >
-            <div class="h-64 overflow-hidden">
-              <img
-                src="./assets/MediCare_Homepage.png"
-                alt="MediCare"
-                class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-              />
-            </div>
-
-            <div class="p-8">
-              <h3 class="text-2xl font-bold text-white mb-3">MediCare</h3>
-              <p class="text-slate-400 text-sm leading-relaxed mb-6 italic">
-                Full-stack healthcare management & scheduling portal.
-              </p>
-
-              <div class="flex justify-between items-center">
-                <div class="flex gap-4">
-                  <a
-                    href="https://github.com/Snape-bur/MediCare.git"
-                    class="text-white hover:text-cyan-400 transition"
-                  >
-                    <i class="fab fa-github text-xl"></i>
-                  </a>
-                  <a
-                    href="http://medicare-th.runasp.net/"
-                    class="text-white hover:text-cyan-400 transition"
-                  >
-                    <i class="fas fa-external-link-alt text-lg"></i>
-                  </a>
-                </div>
-
-                <span
-                  class="text-xs font-bold text-cyan-400/50 uppercase tracking-widest"
-                >
-                  C# / SQL
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <!-- StarEvents -->
-          <div
-            class="group relative bg-slate-900 rounded-3xl overflow-hidden border border-slate-800 transition-all duration-500 hover:-translate-y-2"
-          >
-            <div class="h-64 overflow-hidden">
-              <img
-                src="./assets/StarEvent_Homepage.png"
-                alt="StarEvents"
-                class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-              />
-            </div>
-
-            <div class="p-8">
-              <h3 class="text-2xl font-bold text-white mb-3">StarEvents</h3>
-              <p class="text-slate-400 text-sm leading-relaxed mb-6 italic">
-                Dynamic event planning system with secure CRUD operations.
-              </p>
-
-              <div class="flex justify-between items-center">
-                <div class="flex gap-4">
-                  <a
-                    href="https://github.com/Snape-bur/StarEvents.git"
-                    class="text-white hover:text-cyan-400 transition"
-                  >
-                    <i class="fab fa-github text-xl"></i>
-                  </a>
-                  <a
-                    href="http://starevents-th.runasp.net/"
-                    class="text-white hover:text-cyan-400 transition"
-                  >
-                    <i class="fas fa-external-link-alt text-lg"></i>
-                  </a>
-                </div>
-
-                <span
-                  class="text-xs font-bold text-cyan-400/50 uppercase tracking-widest"
-                >
-                  Entity Framework
-                </span>
-              </div>
-            </div>
-          </div>
+      <div class="grid md:grid-cols-3 gap-10">
+  <div class="group soft-card rounded-3xl overflow-hidden flex flex-col h-full">
+    <div class="h-56 overflow-hidden flex-shrink-0">
+      <img src="./assets/homepage.PNG" alt="ApexDrive" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" />
+    </div>
+    <div class="p-8 flex flex-col flex-grow">
+      <h3 class="text-xl font-bold text-slate-900 mb-3">ApexDrive</h3>
+      <p class="text-slate-500 text-sm mb-6 leading-relaxed flex-grow">
+        High-performance car rental engine built with .NET.
+      </p>
+      <div class="flex justify-between items-center pt-4 border-t border-slate-50">
+        <div class="flex gap-4">
+          <a href="https://github.com/Snape-bur/ApexDrive.git" target="_blank" rel="noopener noreferrer" class="social-rotate text-slate-400 hover:text-[#b8860b] transition">
+            <i class="fab fa-github text-xl"></i>
+          </a>
+          <a href="http://apexdrive.runasp.net/" target="_blank" rel="noopener noreferrer" class="social-rotate text-slate-400 hover:text-[#b8860b] transition">
+            <i class="fas fa-external-link-alt text-lg"></i>
+          </a>
         </div>
+        <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">ASP.NET Core</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="group soft-card rounded-3xl overflow-hidden flex flex-col h-full">
+    <div class="h-56 overflow-hidden flex-shrink-0">
+      <img src="./assets/MediCare_Homepage.png" alt="MediCare" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" />
+    </div>
+    <div class="p-8 flex flex-col flex-grow">
+      <h3 class="text-xl font-bold text-slate-900 mb-3">MediCare</h3>
+      <p class="text-slate-500 text-sm mb-6 leading-relaxed flex-grow">
+        Full-stack healthcare management portal.
+      </p>
+      <div class="flex justify-between items-center pt-4 border-t border-slate-50">
+        <div class="flex gap-4">
+          <a href="https://github.com/Snape-bur/MediCare.git" target="_blank" rel="noopener noreferrer" class="social-rotate text-slate-400 hover:text-[#b8860b] transition">
+            <i class="fab fa-github text-xl"></i>
+          </a>
+          <a href="http://medicare-th.runasp.net/" target="_blank" rel="noopener noreferrer" class="social-rotate text-slate-400 hover:text-[#b8860b] transition">
+            <i class="fas fa-external-link-alt text-lg"></i>
+          </a>
+        </div>
+        <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">C# / SQL</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="group soft-card rounded-3xl overflow-hidden flex flex-col h-full">
+    <div class="h-56 overflow-hidden flex-shrink-0">
+      <img src="./assets/StarEvent_Homepage.png" alt="StarEvents" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" />
+    </div>
+    <div class="p-8 flex flex-col flex-grow">
+      <h3 class="text-xl font-bold text-slate-900 mb-3">StarEvents</h3>
+      <p class="text-slate-500 text-sm mb-6 leading-relaxed flex-grow">
+        Dynamic event planning system with secure CRUD operations.
+      </p>
+      <div class="flex justify-between items-center pt-4 border-t border-slate-50">
+        <div class="flex gap-4">
+          <a href="https://github.com/Snape-bur/StarEvents.git" target="_blank" rel="noopener noreferrer" class="social-rotate text-slate-400 hover:text-[#b8860b] transition">
+            <i class="fab fa-github text-xl"></i>
+          </a>
+          <a href="http://starevents-th.runasp.net/" target="_blank" rel="noopener noreferrer" class="social-rotate text-slate-400 hover:text-[#b8860b] transition">
+            <i class="fas fa-external-link-alt text-lg"></i>
+          </a>
+        </div>
+        <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">EF CORE</span>
+      </div>
+    </div>
+  </div>
+</div>
       </div>
     </section>
 
-    <footer id="contact" class="py-24 border-t border-slate-900">
+    <footer id="contact" class="py-32 border-t border-slate-100 bg-slate-50/30">
       <div class="max-w-4xl mx-auto px-6 text-center">
-        <h2 class="text-5xl font-extrabold text-white mb-10">
-          Let's build the <span class="aurora-text">future</span>.
+        <h2
+          class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-12 tracking-tight"
+        >
+          Let's work together.
         </h2>
         <div
-          class="flex flex-col md:flex-row justify-center items-center gap-8 mb-16"
+          class="flex flex-col md:flex-row justify-center items-center gap-10 mb-16"
         >
           <a
             href="mailto:pyitheimkhai@gmail.com"
-            class="text-xl font-semibold hover:text-cyan-400 transition underline decoration-slate-700 underline-offset-8"
+            class="text-xl font-bold gold-gradient-text hover:text-slate-900 transition"
             >pyitheimkhai@gmail.com</a
           >
-          <span class="hidden md:block text-slate-700">|</span>
+          <span class="hidden md:block text-slate-200">/</span>
           <a
             href="https://linkedin.com/in/pyi-theim-khaing"
-            class="text-xl font-semibold hover:text-cyan-400 transition"
+            target="_blank"
+            class="text-xl font-bold text-slate-600 hover:text-[#b8860b] transition"
             >LinkedIn</a
           >
         </div>
-        <p class="text-slate-600 text-sm uppercase tracking-[0.2em] font-bold">
-          &copy; 2026 Pyi Theim Khaing — Made with Tailwind & Logic
+        <p
+          class="text-slate-400 text-[10px] uppercase tracking-[0.4em] font-bold"
+        >
+          &copy; 2026 Pyi Theim Khaing — Backend Systems & UX Psychology
         </p>
       </div>
     </footer>
 
     <script>
-      function toggleMenu() {
-        const menu = document.getElementById("mobile-menu");
-        // Mobile menu logic implementation
-      }
-
       document.addEventListener("DOMContentLoaded", function () {
         new Typed(".typing", {
           strings: [
-            "Junior Software Developer",
-            "Backend Engineer",
-            ".NET Specialist",
+            "robust backend systems",
+            "scalable .NET apps",
+            "seamless REST APIs",
+            "secure database logic",
           ],
-          typeSpeed: 60,
-          backSpeed: 40,
+          typeSpeed: 40,
+          backSpeed: 20,
           loop: true,
         });
       });
+
+      function toggleMenu() {
+        // Simple menu toggle
+      }
     </script>
   </body>
 </html>
