@@ -16,7 +16,7 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pyi Theim Khaing | Software Developer</title>
+    <title>Pyi Theim Khaing | Junior .NET Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
@@ -35,7 +35,12 @@
 
       /* Gold Metallic Gradient for Headings and Typing Text */
       .gold-gradient-text {
-        background: linear-gradient(90deg, #b8860b 0%, #fbbf24 50%, #b8860b 100%);
+        background: linear-gradient(
+          90deg,
+          #b8860b 0%,
+          #fbbf24 50%,
+          #b8860b 100%
+        );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         display: inline-block;
@@ -111,26 +116,32 @@
           >
         </div>
 
-        <button class="md:hidden text-slate-900" onclick="toggleMenu()">
-          <i class="fas fa-bars"></i>
+        <button
+          class="md:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-slate-50 text-slate-900 hover:bg-amber-50 hover:text-[#b8860b] transition-all duration-300"
+          onclick="toggleMenu()"
+        >
+          <i class="fas fa-bars text-lg"></i>
         </button>
       </div>
     </nav>
 
     <section
       id="profile"
-      class="relative min-h-screen flex flex-col md:flex-row items-center justify-center px-6 gap-20 pt-20"
+      class="relative min-h-screen flex flex-col md:flex-row items-center justify-center px-6 gap-20 pt-20 overflow-hidden"
     >
       <div
-        class="absolute top-0 right-0 w-1/3 h-screen bg-slate-50/50 -z-10"
+        class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-amber-100/30 rounded-full blur-[120px] -z-10"
+      ></div>
+      <div
+        class="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-slate-100/50 rounded-full blur-[100px] -z-10"
       ></div>
 
-      <div class="relative">
+      <div class="relative group">
         <div
-          class="absolute -bottom-6 -right-6 w-32 h-32 bg-amber-50 rounded-full -z-10"
+          class="absolute -inset-1 bg-gradient-to-r from-[#b8860b] to-amber-200 rounded-full blur opacity-20 group-hover:opacity-40 transition duration-1000"
         ></div>
         <div
-          class="w-72 h-72 md:w-80 md:h-80 overflow-hidden rounded-full border-8 border-white shadow-2xl relative z-10"
+          class="w-72 h-72 md:w-96 md:h-96 overflow-hidden rounded-full border-8 border-white shadow-2xl relative z-10"
         >
           <img
             src="./assets/Untitled design (5).png"
@@ -140,12 +151,12 @@
         </div>
       </div>
 
-      <div class="max-w-xl text-center md:text-left">
-        <h2
-          class="text-[#b8860b] font-bold tracking-[0.3em] mb-4 text-[10px] uppercase"
+      <div class="max-w-xl text-center md:text-left z-10">
+        <div
+          class="inline-block px-4 py-1.5 mb-6 rounded-full bg-slate-50 border border-slate-100 text-[#b8860b] font-bold text-[10px] uppercase tracking-[0.3em]"
         >
-          Software Developer
-        </h2>
+          Junior .NET Developer
+        </div>
         <h1
           class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 leading-tight tracking-tight"
         >
@@ -154,265 +165,524 @@
         <div class="text-xl md:text-2xl font-semibold text-slate-500 mb-10">
           I build <span class="typing gold-gradient-text"></span>
         </div>
-
-        <div class="flex flex-wrap gap-4 justify-center md:justify-start mb-12">
-     
+        <div class="flex flex-wrap gap-4 justify-center md:justify-start">
           <a
             href="#contact"
-            class="px-8 py-4 border-2 border-slate-100 font-bold rounded-full hover:bg-slate-50 transition-all text-slate-600 uppercase text-[10px] tracking-widest"
+            class="px-8 py-4 bg-slate-900 text-white font-bold rounded-full hover:bg-[#b8860b] transition-all uppercase text-[10px] tracking-widest shadow-lg shadow-slate-200"
           >
             Let's Talk
-          </a>
-        </div>
-
-        <div class="flex gap-8 justify-center md:justify-start">
-          <a
-            href="https://linkedin.com/in/pyi-theim-khaing"
-            target="_blank"
-            class="social-rotate text-2xl"
-          >
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a
-            href="https://github.com/Snape-bur"
-            target="_blank"
-            class="social-rotate text-2xl"
-          >
-            <i class="fab fa-github"></i>
           </a>
         </div>
       </div>
     </section>
 
     <section id="about" class="py-24 bg-white border-b border-slate-50">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="flex flex-col md:flex-row gap-20 items-center">
-      
-      <div class="md:w-3/5">
-        <h2 class="gold-gradient-text font-bold tracking-[0.4em] mb-4 text-[10px] uppercase">02. Introduction</h2>
-        <h3 class="text-4xl font-extrabold text-slate-900 mb-8 tracking-tight leading-tight">
-          Solving technical problems through the lens of human behavior.
-        </h3>
-        <div class="space-y-6 text-slate-600 leading-relaxed text-lg">
-        <p>
-        I’ve recently completed my <strong>BSc in Computing at London Metropolitan University</strong> and am currently awaiting final results, with a strong interest in how backend systems support real-world <strong>automotive and logistics operations</strong>.
-        </p>
-        <p>
-         With a background in <strong>Psychology</strong>, I bring a user-centered perspective to software development—designing systems such as my car rental management application <strong>ApexDrive</strong> that balance robust backend logic with clear, intuitive workflows.
-        </p>
-        <p>
-        I focus on the <strong>.NET ecosystem</strong>, building secure and scalable backend solutions using <strong>C# and ASP.NET Core</strong>, with experience handling complex data models and operational business logic in web-based applications.
-        </p>
-        </div>
-      </div>
-
-      <div class="md:w-2/5 w-full grid grid-cols-1 gap-4">
-        <div class="group p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-white hover:shadow-xl hover:shadow-amber-500/10 transition-all duration-300">
-          <h4 class="gold-gradient-text font-bold text-[10px] uppercase mb-2 tracking-widest">Education</h4>
-          <p class="text-slate-900 font-bold">B.Sc. Computing (Hons)</p>
-          <p class="text-slate-500 text-sm italic">London Metropolitan University</p>
-        </div>
-
-        <div class="group p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-white hover:shadow-xl hover:shadow-amber-500/10 transition-all duration-300">
-          <h4 class="gold-gradient-text font-bold text-[10px] uppercase mb-2 tracking-widest">Focus</h4>
-          <p class="text-slate-900 font-bold">Backend Architecture & RESTful APIs</p>
-        </div>
-
-        <div class="group p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-white hover:shadow-xl hover:shadow-amber-500/10 transition-all duration-300">
-          <h4 class="gold-gradient-text font-bold text-[10px] uppercase mb-2 tracking-widest">Location</h4>
-          <p class="text-slate-900 font-bold">Bangkok, Thailand | Open to Relocation</p>
-        </div>
-
-      <div class="group p-6 rounded-2xl border border-[#b8860b] shadow-lg shadow-amber-200 transition-transform duration-300 hover:scale-[1.02]" 
-     style="background: linear-gradient(135deg, #b8860b 0%, #daa520 50%, #b8860b 100%);">
-  <h4 class="text-white opacity-90 font-bold text-[10px] uppercase mb-2 tracking-widest">
-    Current Status
-  </h4>
-  <p class="text-white font-extrabold text-lg tracking-tight">
-    Available for Junior Dev Roles
-  </p>
-</div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-   <section id="experience" class="py-32 bg-slate-50/50">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="flex flex-col md:flex-row gap-16 items-start">
-      <div class="md:w-1/3">
-        <h2 class="text-3xl font-extrabold text-slate-900 mb-6 tracking-tight">
-          Core Competencies
-        </h2>
-        <p class="text-slate-500 mb-8 leading-relaxed">
-          I build backend systems that don't just work, they make sense for the 
-          people using them. For me, technical performance is only half the battle. 
-          The logic has to feel intuitive too.
-        </p>
-        <div class="inline-block px-4 py-2 bg-amber-50 text-[#b8860b] rounded-lg text-xs font-bold uppercase tracking-wider">
-          Available for Hire
-        </div>
-      </div>
-
-      <div class="md:w-2/3 grid grid-cols-2 sm:grid-cols-3 gap-6">
-        
-        <div class="p-8 rounded-2xl text-center border border-white/60 bg-white/30 backdrop-blur-md shadow-lg shadow-slate-200/50 hover:bg-white/50 hover:scale-[1.02] transition-all duration-300">
-          <i class="fas fa-code text-2xl mb-4 text-[#b8860b]"></i>
-          <p class="font-bold text-slate-800 text-xs tracking-widest uppercase">
-            C# / .NET
-          </p>
-        </div>
-
-        <div class="p-8 rounded-2xl text-center border border-white/60 bg-white/30 backdrop-blur-md shadow-lg shadow-slate-200/50 hover:bg-white/50 hover:scale-[1.02] transition-all duration-300">
-          <i class="fas fa-layer-group text-2xl mb-4 text-[#b8860b]"></i>
-          <p class="font-bold text-slate-800 text-xs tracking-widest uppercase">
-            ASP.NET Core
-          </p>
-        </div>
-
-        <div class="p-8 rounded-2xl text-center border border-white/60 bg-white/30 backdrop-blur-md shadow-lg shadow-slate-200/50 hover:bg-white/50 hover:scale-[1.02] transition-all duration-300">
-          <i class="fas fa-database text-2xl mb-4 text-[#b8860b]"></i>
-          <p class="font-bold text-slate-800 text-xs tracking-widest uppercase">
-            SQL Server
-          </p>
-        </div>
-
-        <div class="p-8 rounded-2xl text-center border border-white/60 bg-white/30 backdrop-blur-md shadow-lg shadow-slate-200/50 hover:bg-white/50 hover:scale-[1.02] transition-all duration-300">
-          <i class="fas fa-cloud text-2xl mb-4 text-[#b8860b]"></i>
-          <p class="font-bold text-slate-800 text-xs tracking-widest uppercase">
-            REST APIs
-          </p>
-        </div>
-
-        <div class="p-8 rounded-2xl text-center border border-white/60 bg-white/30 backdrop-blur-md shadow-lg shadow-slate-200/50 hover:bg-white/50 hover:scale-[1.02] transition-all duration-300">
-          <i class="fab fa-git-alt text-2xl mb-4 text-[#b8860b]"></i>
-          <p class="font-bold text-slate-800 text-xs tracking-widest uppercase">
-            Git / GitHub
-          </p>
-        </div>
-
-        <div class="p-8 rounded-2xl text-center border border-white/60 bg-white/30 backdrop-blur-md shadow-lg shadow-slate-200/50 hover:bg-white/50 hover:scale-[1.02] transition-all duration-300">
-          <i class="fas fa-project-diagram text-2xl mb-4 text-[#b8860b]"></i>
-          <p class="font-bold text-slate-800 text-xs tracking-widest uppercase">
-            EF Core
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-    <section id="projects" class="py-32">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="mb-16">
-          <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">
-            Recent Projects
-          </h2>
-          <div class="h-1 w-12 bg-[#b8860b] mt-4 rounded-full"></div>
-        </div>
+        <div class="flex flex-col md:flex-row gap-20 items-center">
+          <div class="md:w-3/5">
+            <h2
+              class="gold-gradient-text font-bold tracking-[0.4em] mb-4 text-[10px] uppercase"
+            >
+              02. Introduction
+            </h2>
+            <h3
+              class="text-4xl font-extrabold text-slate-900 mb-8 tracking-tight leading-tight"
+            >
+              Building secure & scalable .NET backends.
+            </h3>
+            <div class="space-y-6 text-slate-600 leading-relaxed text-lg">
+              <p>
+                I’ve recently completed my
+                <strong
+                  >BSc in Computing at London Metropolitan University</strong
+                >
+                and am currently awaiting final results, with a strong interest
+                in how backend systems support real-world
+                <strong>automotive and logistics operations</strong>.
+              </p>
+              <p>
+                With a background in <strong>Psychology</strong>, I bring a
+                user-centered perspective to software development—designing
+                systems such as my car rental management application
+                <strong>ApexDrive</strong> that balance robust backend logic
+                with clear, intuitive workflows.
+              </p>
+              <p>
+                I focus on the <strong>.NET ecosystem</strong>, building secure
+                and scalable backend solutions using
+                <strong>C# and ASP.NET Core</strong>, with experience handling
+                complex data models and operational business logic in web-based
+                applications.
+              </p>
+            </div>
+          </div>
 
-      <div class="grid md:grid-cols-3 gap-10">
-  <div class="group soft-card rounded-3xl overflow-hidden flex flex-col h-full">
-    <div class="h-56 overflow-hidden flex-shrink-0">
-      <img src="./assets/homepage.PNG" alt="ApexDrive" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" />
-    </div>
-    <div class="p-8 flex flex-col flex-grow">
-      <h3 class="text-xl font-bold text-slate-900 mb-3">ApexDrive</h3>
-      <p class="text-slate-500 text-sm mb-6 leading-relaxed flex-grow">
-        High-performance car rental engine built with .NET.
-      </p>
-      <div class="flex justify-between items-center pt-4 border-t border-slate-50">
-        <div class="flex gap-4">
-          <a href="https://github.com/Snape-bur/ApexDrive.git" target="_blank" rel="noopener noreferrer" class="social-rotate text-slate-400 hover:text-[#b8860b] transition">
-            <i class="fab fa-github text-xl"></i>
-          </a>
-          <a href="http://apexdrive.runasp.net/" target="_blank" rel="noopener noreferrer" class="social-rotate text-slate-400 hover:text-[#b8860b] transition">
-            <i class="fas fa-external-link-alt text-lg"></i>
-          </a>
-        </div>
-        <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">ASP.NET Core</span>
-      </div>
-    </div>
-  </div>
+          <div class="md:w-2/5 w-full grid grid-cols-1 gap-4">
+            <div
+              class="group p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-white hover:shadow-xl hover:shadow-amber-500/10 transition-all duration-300"
+            >
+              <h4
+                class="gold-gradient-text font-bold text-[10px] uppercase mb-2 tracking-widest"
+              >
+                Education
+              </h4>
+              <p class="text-slate-900 font-bold">B.Sc. Computing (Hons)</p>
+              <p class="text-slate-500 text-sm italic">
+                London Metropolitan University
+              </p>
+            </div>
 
-  <div class="group soft-card rounded-3xl overflow-hidden flex flex-col h-full">
-    <div class="h-56 overflow-hidden flex-shrink-0">
-      <img src="./assets/MediCare_Homepage.png" alt="MediCare" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" />
-    </div>
-    <div class="p-8 flex flex-col flex-grow">
-      <h3 class="text-xl font-bold text-slate-900 mb-3">MediCare</h3>
-      <p class="text-slate-500 text-sm mb-6 leading-relaxed flex-grow">
-        Full-stack healthcare management portal.
-      </p>
-      <div class="flex justify-between items-center pt-4 border-t border-slate-50">
-        <div class="flex gap-4">
-          <a href="https://github.com/Snape-bur/MediCare.git" target="_blank" rel="noopener noreferrer" class="social-rotate text-slate-400 hover:text-[#b8860b] transition">
-            <i class="fab fa-github text-xl"></i>
-          </a>
-          <a href="http://medicare-th.runasp.net/" target="_blank" rel="noopener noreferrer" class="social-rotate text-slate-400 hover:text-[#b8860b] transition">
-            <i class="fas fa-external-link-alt text-lg"></i>
-          </a>
-        </div>
-        <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">C# / SQL</span>
-      </div>
-    </div>
-  </div>
+            <div
+              class="group p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-white hover:shadow-xl hover:shadow-amber-500/10 transition-all duration-300"
+            >
+              <h4
+                class="gold-gradient-text font-bold text-[10px] uppercase mb-2 tracking-widest"
+              >
+                Focus
+              </h4>
+              <p class="text-slate-900 font-bold">
+                Backend Architecture & RESTful APIs
+              </p>
+            </div>
 
-  <div class="group soft-card rounded-3xl overflow-hidden flex flex-col h-full">
-    <div class="h-56 overflow-hidden flex-shrink-0">
-      <img src="./assets/StarEvent_Homepage.png" alt="StarEvents" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" />
-    </div>
-    <div class="p-8 flex flex-col flex-grow">
-      <h3 class="text-xl font-bold text-slate-900 mb-3">StarEvents</h3>
-      <p class="text-slate-500 text-sm mb-6 leading-relaxed flex-grow">
-        Dynamic event planning system with secure CRUD operations.
-      </p>
-      <div class="flex justify-between items-center pt-4 border-t border-slate-50">
-        <div class="flex gap-4">
-          <a href="https://github.com/Snape-bur/StarEvents.git" target="_blank" rel="noopener noreferrer" class="social-rotate text-slate-400 hover:text-[#b8860b] transition">
-            <i class="fab fa-github text-xl"></i>
-          </a>
-          <a href="http://starevents-th.runasp.net/" target="_blank" rel="noopener noreferrer" class="social-rotate text-slate-400 hover:text-[#b8860b] transition">
-            <i class="fas fa-external-link-alt text-lg"></i>
-          </a>
+            <div
+              class="group p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-white hover:shadow-xl hover:shadow-amber-500/10 transition-all duration-300"
+            >
+              <h4
+                class="gold-gradient-text font-bold text-[10px] uppercase mb-2 tracking-widest"
+              >
+                Location
+              </h4>
+              <p class="text-slate-900 font-bold">
+                Bangkok, Thailand | Open to Relocation
+              </p>
+            </div>
+
+            <div
+              class="group p-6 rounded-2xl border border-[#b8860b] shadow-lg shadow-amber-200 transition-transform duration-300 hover:scale-[1.02]"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  #b8860b 0%,
+                  #daa520 50%,
+                  #b8860b 100%
+                );
+              "
+            >
+              <h4
+                class="text-white opacity-90 font-bold text-[10px] uppercase mb-2 tracking-widest"
+              >
+                Current Status
+              </h4>
+              <p class="text-white font-extrabold text-lg tracking-tight">
+                Available for Junior Dev Roles
+              </p>
+            </div>
+          </div>
         </div>
-        <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">EF CORE</span>
-      </div>
-    </div>
-  </div>
-</div>
       </div>
     </section>
 
-    <footer id="contact" class="py-32 border-t border-slate-100 bg-slate-50/30">
-      <div class="max-w-4xl mx-auto px-6 text-center">
-        <h2
-          class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-12 tracking-tight"
-        >
-          Let's work together.
-        </h2>
-        <div
-          class="flex flex-col md:flex-row justify-center items-center gap-10 mb-16"
-        >
-          <a
-            href="mailto:pyitheimkhai@gmail.com"
-            class="text-xl font-bold gold-gradient-text hover:text-slate-900 transition"
-            >pyitheimkhai@gmail.com</a
+    <section id="experience" class="py-32 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col lg:flex-row gap-20">
+          <div class="lg:w-1/3">
+            <h2
+              class="gold-gradient-text font-bold tracking-[0.4em] mb-4 text-[10px] uppercase"
+            >
+              03. Expertise
+            </h2>
+            <h3
+              class="text-4xl font-extrabold text-slate-900 mb-6 tracking-tight"
+            >
+              The Technical Core.
+            </h3>
+            <p class="text-slate-500 leading-relaxed text-lg mb-8">
+              Focusing on the <strong>.NET ecosystem</strong>, I build backend
+              architectures where logic meets psychology. I prioritize clean
+              code, scalable APIs, and intuitive data structures.
+            </p>
+          </div>
+
+          <div
+            class="lg:w-2/3 grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[120px]"
           >
-          <span class="hidden md:block text-slate-200">/</span>
-          <a
-            href="https://linkedin.com/in/pyi-theim-khaing"
-            target="_blank"
-            class="text-xl font-bold text-slate-600 hover:text-[#b8860b] transition"
-            >LinkedIn</a
-          >
+            <div
+              class="col-span-2 row-span-2 bg-slate-900 rounded-[2.5rem] p-8 flex flex-col justify-between text-white group hover:bg-[#b8860b] transition-all duration-500 shadow-2xl shadow-slate-200"
+            >
+              <i
+                class="fas fa-code text-4xl opacity-50 group-hover:scale-110 transition-transform"
+              ></i>
+              <div>
+                <p
+                  class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2"
+                >
+                  Primary Specialization
+                </p>
+                <h4 class="text-3xl font-bold">C# / .NET Ecosystem</h4>
+              </div>
+            </div>
+
+            <div
+              class="col-span-2 bg-slate-50 rounded-[2rem] p-6 flex items-center gap-6 border border-slate-100 hover:shadow-lg transition-all"
+            >
+              <div
+                class="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center text-[#b8860b]"
+              >
+                <i class="fas fa-database text-xl"></i>
+              </div>
+              <div>
+                <p
+                  class="font-bold text-slate-800 uppercase text-xs tracking-widest"
+                >
+                  SQL Server
+                </p>
+                <p class="text-slate-400 text-xs mt-1">
+                  Schema Design & Optimization
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="bg-amber-50 rounded-[2rem] p-4 flex flex-col items-center justify-center border border-amber-100 hover:scale-95 transition-all"
+            >
+              <i class="fas fa-cloud text-[#b8860b] mb-2"></i>
+              <p
+                class="font-bold text-slate-800 text-[9px] uppercase tracking-widest"
+              >
+                REST APIs
+              </p>
+            </div>
+
+            <div
+              class="bg-slate-50 rounded-[2rem] p-4 flex flex-col items-center justify-center border border-slate-100 hover:scale-95 transition-all"
+            >
+              <i class="fas fa-project-diagram text-slate-400 mb-2"></i>
+              <p
+                class="font-bold text-slate-800 text-[9px] uppercase tracking-widest"
+              >
+                EF Core
+              </p>
+            </div>
+
+            <div
+              class="col-span-2 bg-slate-50 rounded-[2rem] p-6 flex items-center gap-4 border border-slate-100 hover:shadow-lg transition-all"
+            >
+              <p class="text-slate-400 text-sm font-medium">
+                Currently exploring:
+                <span class="text-slate-900 font-bold"
+                  >Azure Services & Microservices</span
+                >
+              </p>
+            </div>
+          </div>
         </div>
-        <p
-          class="text-slate-400 text-[10px] uppercase tracking-[0.4em] font-bold"
+      </div>
+    </section>
+    <section id="projects" class="py-32 bg-slate-50/50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-20 gap-6"
         >
-          &copy; 2026 Pyi Theim Khaing — Backend Systems & UX Psychology
-        </p>
+          <div class="max-w-2xl">
+            <h2
+              class="gold-gradient-text font-bold tracking-[0.4em] mb-4 text-[10px] uppercase"
+            >
+              04. Selected Portfolio
+            </h2>
+            <h3
+              class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight"
+            >
+              Engineering Scalable <br />Backend Solutions.
+            </h3>
+            <div class="h-1.5 w-20 bg-[#b8860b] mt-6 rounded-full"></div>
+          </div>
+          <a
+            href="https://github.com/Snape-bur"
+            target="_blank"
+            class="group flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-[#b8860b] transition-all"
+          >
+            Explore more code
+            <i
+              class="fas fa-arrow-right group-hover:translate-x-2 transition-transform"
+            ></i>
+          </a>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div
+            class="group bg-white rounded-[2.5rem] p-5 border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-500 flex flex-col h-full"
+          >
+            <div
+              class="aspect-video overflow-hidden rounded-[2rem] mb-8 relative"
+            >
+              <img
+                src="./assets/homepage.PNG"
+                alt="ApexDrive"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+              ></div>
+            </div>
+            <div class="px-2 flex flex-col flex-grow">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-2xl font-bold text-slate-900">ApexDrive</h4>
+                <span
+                  class="px-3 py-1 bg-amber-50 text-[#b8860b] text-[9px] font-bold uppercase rounded-full"
+                  >Automotive SaaS</span
+                >
+              </div>
+              <p class="text-slate-500 text-sm mb-6 leading-relaxed flex-grow">
+                <strong>The Challenge:</strong> Developing a vehicle rental
+                system with availability validation and secure booking flows.
+                Built using ASP.NET Core MVC with layered architecture and
+                separated business logic for maintainability.
+              </p>
+              <div
+                class="flex items-center gap-4 pt-6 border-t border-slate-100"
+              >
+                <div class="flex gap-3">
+                  <a
+                    href="https://github.com/Snape-bur/ApexDrive.git"
+                    target="_blank"
+                    class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-slate-900 hover:text-white transition-all shadow-sm"
+                  >
+                    <i class="fab fa-github text-lg"></i>
+                  </a>
+                  <a
+                    href="http://apexdrive.runasp.net/"
+                    target="_blank"
+                    class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-[#b8860b] hover:text-white transition-all shadow-sm"
+                  >
+                    <i class="fas fa-external-link-alt text-xs"></i>
+                  </a>
+                </div>
+                <span
+                  class="ml-auto text-[9px] font-bold text-slate-400 uppercase tracking-widest"
+                  >ASP.NET Core / C#</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="group bg-white rounded-[2.5rem] p-5 border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-500 flex flex-col h-full"
+          >
+            <div
+              class="aspect-video overflow-hidden rounded-[2rem] mb-8 relative"
+            >
+              <img
+                src="./assets/MediCare_Homepage.png"
+                alt="MediCare"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+              ></div>
+            </div>
+            <div class="px-2 flex flex-col flex-grow">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-2xl font-bold text-slate-900">MediCare</h4>
+                <span
+                  class="px-3 py-1 bg-blue-50 text-blue-500 text-[9px] font-bold uppercase rounded-full"
+                  >Healthcare</span
+                >
+              </div>
+              <p class="text-slate-500 text-sm mb-6 leading-relaxed flex-grow">
+                <strong>The Challenge:</strong> Developing a secure healthcare
+                appointment system with role-based access for patients, doctors,
+                and admins. Built using ASP.NET Core MVC with layered
+                architecture, structured relational schemas in SQL Server, and
+                validation logic to prevent double booking.
+              </p>
+              <div
+                class="flex items-center gap-4 pt-6 border-t border-slate-100"
+              >
+                <div class="flex gap-3">
+                  <a
+                    href="https://github.com/Snape-bur/MediCare.git"
+                    target="_blank"
+                    class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-slate-900 hover:text-white transition-all shadow-sm"
+                  >
+                    <i class="fab fa-github text-lg"></i>
+                  </a>
+                  <a
+                    href="http://medicare-th.runasp.net/"
+                    target="_blank"
+                    class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-[#b8860b] hover:text-white transition-all shadow-sm"
+                  >
+                    <i class="fas fa-external-link-alt text-xs"></i>
+                  </a>
+                </div>
+                <span
+                  class="ml-auto text-[9px] font-bold text-slate-400 uppercase tracking-widest"
+                  >SQL Server / .NET</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="group bg-white rounded-[2.5rem] p-5 border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-500 flex flex-col h-full"
+          >
+            <div
+              class="aspect-video overflow-hidden rounded-[2rem] mb-8 relative"
+            >
+              <img
+                src="./assets/StarEvent_Homepage.png"
+                alt="StarEvents"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+              ></div>
+            </div>
+            <div class="px-2 flex flex-col flex-grow">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-2xl font-bold text-slate-900">StarEvents</h4>
+                <span
+                  class="px-3 py-1 bg-purple-50 text-purple-500 text-[9px] font-bold uppercase rounded-full"
+                  >Event Mgmt</span
+                >
+              </div>
+              <p class="text-slate-500 text-sm mb-6 leading-relaxed flex-grow">
+                <strong>The Challenge:</strong> Building an event ticketing
+                system with dynamic availability tracking and secure user
+                authentication. Implemented structured CRUD operations using
+                Entity Framework Core and organized business logic through
+                layered architecture for maintainability.
+              </p>
+              <div
+                class="flex items-center gap-4 pt-6 border-t border-slate-100"
+              >
+                <div class="flex gap-3">
+                  <a
+                    href="https://github.com/Snape-bur/StarEvents.git"
+                    target="_blank"
+                    class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-slate-900 hover:text-white transition-all shadow-sm"
+                  >
+                    <i class="fab fa-github text-lg"></i>
+                  </a>
+                  <a
+                    href="http://starevents-th.runasp.net/"
+                    target="_blank"
+                    class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-[#b8860b] hover:text-white transition-all shadow-sm"
+                  >
+                    <i class="fas fa-external-link-alt text-xs"></i>
+                  </a>
+                </div>
+                <span
+                  class="ml-auto text-[9px] font-bold text-slate-400 uppercase tracking-widest"
+                  >Entity Framework</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      id="contact"
+      class="relative py-32 border-t border-slate-100 bg-white overflow-hidden"
+    >
+      <div
+        class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-amber-50/50 rounded-full blur-[120px] -z-10"
+      ></div>
+
+      <div class="max-w-6xl mx-auto px-6">
+        <div
+          class="bg-slate-900 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl shadow-slate-200"
+        >
+          <div
+            class="absolute top-0 right-0 w-64 h-64 bg-[#b8860b] opacity-10 blur-[80px]"
+          ></div>
+
+          <div class="relative z-10">
+            <h2
+              class="text-xs font-bold uppercase tracking-[0.5em] text-amber-400 mb-6"
+            >
+              Ready to scale?
+            </h2>
+            <h3
+              class="text-4xl md:text-7xl font-extrabold text-white mb-12 tracking-tighter leading-tight"
+            >
+              Let's build something <br /><span class="text-slate-400"
+                >extraordinary.</span
+              >
+            </h3>
+
+            <div
+              class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 mb-16"
+            >
+              <a
+                href="mailto:pyitheimkhai@gmail.com"
+                class="group relative py-4 px-8 bg-white/5 rounded-full border border-white/10 hover:border-amber-400 transition-all duration-300"
+              >
+                <span
+                  class="text-xl font-bold text-white group-hover:text-amber-400 transition-colors"
+                  >pyitheimkhai@gmail.com</span
+                >
+              </a>
+
+              <a
+                href="https://linkedin.com/in/pyi-theim-khaing"
+                target="_blank"
+                class="flex items-center gap-3 text-slate-400 hover:text-white transition-all duration-300 group"
+              >
+                <i
+                  class="fab fa-linkedin text-2xl group-hover:rotate-12 transition-transform"
+                ></i>
+                <span class="font-bold uppercase tracking-widest text-[11px]"
+                  >LinkedIn</span
+                >
+              </a>
+            </div>
+
+            <div class="h-px w-full bg-white/10 mb-12"></div>
+
+            <div
+              class="flex flex-col md:flex-row justify-between items-center gap-8"
+            >
+              <div class="flex items-center gap-4 text-left">
+                <div
+                  class="w-10 h-10 rounded-full bg-amber-400/10 flex items-center justify-center"
+                >
+                  <div
+                    class="w-2 h-2 bg-amber-400 rounded-full animate-pulse"
+                  ></div>
+                </div>
+                <div>
+                  <p
+                    class="text-[10px] uppercase tracking-widest text-slate-500 font-bold"
+                  >
+                    Currently based in
+                  </p>
+                  <p class="text-white font-bold">Bangkok, Thailand</p>
+                </div>
+              </div>
+
+              <p
+                class="text-slate-500 text-[10px] uppercase tracking-[0.3em] font-bold"
+              >
+                &copy; 2026 Pyi Theim Khaing
+                <span class="mx-4 text-white/10">|</span> Backend Systems & UX
+                Psychology
+              </p>
+
+              <div class="flex gap-6">
+                <a
+                  href="https://github.com/Snape-bur"
+                  target="_blank"
+                  class="text-slate-500 hover:text-white transition-colors"
+                >
+                  <i class="fab fa-github text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
 
